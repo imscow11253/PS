@@ -40,3 +40,11 @@
 
  <p>매 쿼리마다 달콤한 솜사탕을 얻을 수 있는 경우 가능한 <mjx-container class="MathJax" jax="CHTML" style="font-size: 109%; position: relative;"><mjx-math class="MJX-TEX" aria-hidden="true"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D44E TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c2C"></mjx-c></mjx-mo><mjx-mtext class="mjx-n" space="2"><mjx-c class="mjx-cA0"></mjx-c></mjx-mtext><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D44F TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c2C"></mjx-c></mjx-mo><mjx-mtext class="mjx-n" space="2"><mjx-c class="mjx-cA0"></mjx-c></mjx-mtext><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D450 TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c2C"></mjx-c></mjx-mo><mjx-mtext class="mjx-n" space="2"><mjx-c class="mjx-cA0"></mjx-c></mjx-mtext><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D451 TEX-I"></mjx-c></mjx-mi></mjx-math><mjx-assistive-mml unselectable="on" display="inline"><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>a</mi><mo>,</mo><mtext> </mtext><mi>b</mi><mo>,</mo><mtext> </mtext><mi>c</mi><mo>,</mo><mtext> </mtext><mi>d</mi></math></mjx-assistive-mml><span aria-hidden="true" class="no-mathjax mjx-copytext">$a,\ b,\ c,\ d$</span></mjx-container>를 아무거나 하나 공백으로 구분하여 출력하고, 솜사탕을 얻을 수 없는 경우 <span style="color:#e74c3c;"><code>-1</code></span>을 출력한다.</p>
 
+ ### 풀이
+
+ <p>시행착오를 많이 거쳐서 푼 문제다. 처음에는 RRBB인 경우가 되는 모든 범위를 순서쌍을 vector에 저장해두고 비교하는 방식으로 풀었는데 시간초과가 났다. —> 당연한 결과
+
+그리고 도저히 모르겠어서 GPT한테 물어보니 이분탐색을 알려주었다. 이때 c++에서 lower_bound, upper_bound라는 함수가 있다는 것을 처음 알았다. (이 함수 내부에서 이분탐색을 한다.) 그래서 그걸로 풀었더니 런타임 에러가 났다. 
+
+lower_bound는 iterator를 반환하는데 내가 예외처리를 하지 않고 iterator+1 을 하는 바람에 out of bound 가 생긴 것 같다. 모든 상황에 대해서 예외처리를 하니까 풀렸다.</p>
+
