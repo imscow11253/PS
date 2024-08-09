@@ -34,3 +34,11 @@
 
  <p>게임 세팅을 할 수 있는 경우의 수를 <mjx-container class="MathJax" jax="CHTML" style="font-size: 109%; position: relative;"><mjx-math class="MJX-TEX" aria-hidden="true"><mjx-msup><mjx-mn class="mjx-n"><mjx-c class="mjx-c31"></mjx-c><mjx-c class="mjx-c30"></mjx-c></mjx-mn><mjx-script style="vertical-align: 0.393em;"><mjx-texatom size="s" texclass="ORD"><mjx-mn class="mjx-n"><mjx-c class="mjx-c39"></mjx-c></mjx-mn></mjx-texatom></mjx-script></mjx-msup><mjx-mo class="mjx-n" space="3"><mjx-c class="mjx-c2B"></mjx-c></mjx-mo><mjx-mn class="mjx-n" space="3"><mjx-c class="mjx-c37"></mjx-c></mjx-mn></mjx-math><mjx-assistive-mml unselectable="on" display="inline"><math xmlns="http://www.w3.org/1998/Math/MathML"><msup><mn>10</mn><mrow data-mjx-texclass="ORD"><mn>9</mn></mrow></msup><mo>+</mo><mn>7</mn></math></mjx-assistive-mml><span aria-hidden="true" class="no-mathjax mjx-copytext">$10^{9}+7$</span></mjx-container>로 나눈 나머지를 출력한다. </p>
 
+
+
+### 풀이 
+
+ <p>식을 세우는데에는 별로 어렵지 않았다. 문제를 읽고 차근차근 생각하면 식을 쉽게 도출 해낼 수 있다. 전체 식은 nCk * 2^(k-1) 이라는 것을 알 수 있다. nCk는 n개에서 k개를 고르는 경우이고, 2^(k-1)은 타워를 배열하는 경우이다. 타워를 배열하는 경우가 어떻게 저렇게 나오는가? 가장 긴 것부터 놓는다고 생각하면 그 다음 긴 것을 놓을때는 꼭 이전에 놓았던 타워 (지금 놓으려는 것보다 긴 것) 의 바로 양 옆 중 한 곳에  두어야 한다. Why? 둘 사이에 빈 공간이 있으면 다음 타워들로 채워야 하는데 다음 타워들은 그 두개 보다 작은 타워이기 때문에 성립할 수가 없다. 즉 k-1개의 타워가 2 곳에 둘 수 있으므로 2 * 2 * 2 * 2 …… 하게 된다. 
+
+처음에 조합을 그냥 계산식으로 구하려고 해서 overflow가 났다. c++에서 라이브러리로 제공해주는게 있나 찾아보던중 조합의 경우의 수를 쉽게 DP로 구하는 방법인 **파스칼 삼각형**을 보았다. 이것을 보고 풀어내었다.</p>
+
