@@ -38,3 +38,29 @@
 
 <p>두 번째 줄부터 <mjx-container class="MathJax" jax="CHTML" style="font-size: 109%; position: relative;"><mjx-math class="MJX-TEX" aria-hidden="true"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D43E TEX-I"></mjx-c></mjx-mi></mjx-math><mjx-assistive-mml unselectable="on" display="inline"><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>K</mi></math></mjx-assistive-mml><span aria-hidden="true" class="no-mathjax mjx-copytext">$K$</span></mjx-container>개의 줄에 개편 후 각 버스 노선의 <mjx-container class="MathJax" jax="CHTML" style="font-size: 109%; position: relative;"><mjx-math class="MJX-TEX" aria-hidden="true"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D446 TEX-I"></mjx-c></mjx-mi></mjx-math><mjx-assistive-mml unselectable="on" display="inline"><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>S</mi></math></mjx-assistive-mml><span aria-hidden="true" class="no-mathjax mjx-copytext">$S$</span></mjx-container>, <mjx-container class="MathJax" jax="CHTML" style="font-size: 109%; position: relative;"><mjx-math class="MJX-TEX" aria-hidden="true"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D438 TEX-I"></mjx-c></mjx-mi></mjx-math><mjx-assistive-mml unselectable="on" display="inline"><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>E</mi></math></mjx-assistive-mml><span aria-hidden="true" class="no-mathjax mjx-copytext">$E$</span></mjx-container>, <mjx-container class="MathJax" jax="CHTML" style="font-size: 109%; position: relative;"><mjx-math class="MJX-TEX" aria-hidden="true"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D436 TEX-I"></mjx-c></mjx-mi></mjx-math><mjx-assistive-mml unselectable="on" display="inline"><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>C</mi></math></mjx-assistive-mml><span aria-hidden="true" class="no-mathjax mjx-copytext">$C$</span></mjx-container>를 <mjx-container class="MathJax" jax="CHTML" style="font-size: 109%; position: relative;"><mjx-math class="MJX-TEX" aria-hidden="true"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D446 TEX-I"></mjx-c></mjx-mi></mjx-math><mjx-assistive-mml unselectable="on" display="inline"><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>S</mi></math></mjx-assistive-mml><span aria-hidden="true" class="no-mathjax mjx-copytext">$S$</span></mjx-container>가 작은 순서대로 출력한다.</p>
 
+### 출력 
+
+ <p>첫 번째 줄에 개편이 끝난 후의 버스 노선의 수 <mjx-container class="MathJax" jax="CHTML" style="font-size: 109%; position: relative;"><mjx-math class="MJX-TEX" aria-hidden="true"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D43E TEX-I"></mjx-c></mjx-mi></mjx-math><mjx-assistive-mml unselectable="on" display="inline"><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>K</mi></math></mjx-assistive-mml><span aria-hidden="true" class="no-mathjax mjx-copytext">$K$</span></mjx-container>를 출력한다.</p>
+
+<p>알고리즘적으로 어려운 문제는 아니었다. 그냥 생각한 그대로 navie 하게 풀면 된다.
+
+근데 첫 시도 때 틀렸다고 나왔다. 보통 난 풀다가 틀리면 질문게시판에서 반례를 찾아보는 편이다. 혼자 스스로 반례를 찾아봐야지 다짐하면서도 틀리게 되면 질문게시판부터 간다. 근데 이번 문제는 질문게시판에 반례가 없어서 스스로 찾아볼 수 밖에 없었다. 문제를 다시 읽고, 경계값 이나 특이 case일 것 같은 것을 차례로 넣다보니 찾았다. 
+
+2
+
+1 2 3
+
+2 3 4
+
+3 4 5
+
+이게 반례인데 두번째 for 문에서 조건문이 현재 업데이트된 tuple의 끝나는 시간과 다음 후보 시작 시간을 비교해야하는데 나는 업데이트된 tuple이 아니라 초기값, i 번째 끝나는 시간과 비교해서 틀린 거였다. 
+
+수정하고 제출하니 이번엔 시간초과 났다… 하..
+
+생각해보니 내가 시간복잡도 계산을 대충해서 그런 거였다. 두번째 for문을 줄여보고자 else break; 구문을 넣었다. 이러면 두번째 for문이 n의 최대값까지 안갈 것이라 예상했기 때문인데 수정하고 나니 맞았다!
+
+결론 
+
+반례는 스스로 찾자.</p>
+
