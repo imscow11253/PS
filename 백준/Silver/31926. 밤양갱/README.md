@@ -45,3 +45,12 @@
 
  <p>민우가 문제에 언급된 시행 중 하나를 선택하여 매초 시행했을 때, <mjx-container class="MathJax" jax="CHTML" style="font-size: 109%; position: relative;"><mjx-math class="MJX-TEX" aria-hidden="true"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D441 TEX-I"></mjx-c></mjx-mi></mjx-math><mjx-assistive-mml unselectable="on" display="inline"><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>N</mi></math></mjx-assistive-mml><span aria-hidden="true" class="no-mathjax mjx-copytext">$N$</span></mjx-container>번의 <code><span style="color:#e74c3c;">daldidalgo</span></code>를 입력한 후 <mjx-container class="MathJax" jax="CHTML" style="font-size: 109%; position: relative;"><mjx-math class="MJX-TEX" aria-hidden="true"><mjx-mn class="mjx-n"><mjx-c class="mjx-c31"></mjx-c></mjx-mn></mjx-math><mjx-assistive-mml unselectable="on" display="inline"><math xmlns="http://www.w3.org/1998/Math/MathML"><mn>1</mn></math></mjx-assistive-mml><span aria-hidden="true" class="no-mathjax mjx-copytext">$1$</span></mjx-container>번의 <code><span style="color:#e74c3c;">daldidan</span></code>을 입력할 수 있는 최소 시간을 출력한다.</p>
 
+ 
+### 풀이 
+
+ <p>간단한 문제였다. edge case들을 잘 생각하면 쉽게 풀 수 있다. 
+
+1. daldidalgo 는 10이 아니라 8로 만들 수 있다. (dal 반복)
+2. daldidalgo가 한 번 만들어지고 나면 최대 2^n 만큼 계속 늘어난다.
+3. daldidan도 2로 만들 수 있다. 근데 daldidalgo가 2^n 만큼 복사될 때 한 자리 가질 수 있으면 daldidan도 daldida 까지는 복사될 수 있다.</p>
+
