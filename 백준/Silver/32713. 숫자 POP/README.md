@@ -30,3 +30,14 @@
 
  <p>최대 <mjx-container class="MathJax" jax="CHTML" style="font-size: 109%; position: relative;"><mjx-math class="MJX-TEX" aria-hidden="true"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D43E TEX-I"></mjx-c></mjx-mi></mjx-math><mjx-assistive-mml unselectable="on" display="inline"><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>K</mi></math></mjx-assistive-mml><span aria-hidden="true" class="no-mathjax mjx-copytext">$K$</span></mjx-container>개의 원소를 지워 나올 수 있는 최대 연속 길이를 출력한다.</p>
 
+### 풀이 
+
+ <p>KUPC에서 못 풀었던 문제를 다시 풀어보고 있다. 한 번 안 보이면 끝까지 안 보이는 것 같다. 알고나면 정말 간단한데 대회에서는 왜 안 보였는지 모르겠다. 계속 DP인가? 고민했다. 
+
+나는 항상 처음에 브루트포스 방법을 먼저 생각해본다. 모든 원소들의 집합을 알고 각 원소마다 연속되는 시작점, 끝점을 가지고 있다가 k의 범위 내에 줄일 수 있는 간극의 집합을 뽑아서 풀려고 했다. 근데 암만 생각해도 경우의 수가 너무 많고, 예외가 있을 것 같아서 미루고 미루다가 못 풀었다. 
+
+근데 브루트포스로 푸는게 맞았다. 애초에 브루트포스로 생각하는 방법이 잘못되었다. 배열을 순회하면서 각 원소마다 그리디하게 다음 원소가 다르면 없애고, 같으면 count하는 방법을 쓰면 된다. 여기서 의문. A(i) 를 기준으로 그 다음 원소를 볼 때 꼭 바로 다음 마주하는, A(i)와는 다른 원소를 없애는 것보다 그 뒤에 나올 어떤 원소를 없애는 것이 효율적일 수도 있는데 이건 고려하지 않는 건가? 
+
+차피 그 원소도 나중에 순회의 대상으로 되기 때문에 고려하지 않아도 되는 것이었다. 
+
+브루트포스를 생각할 때 좋은 방법은 그 배열을 순회한다고 생각하면 좋을 것 같다.</p>
