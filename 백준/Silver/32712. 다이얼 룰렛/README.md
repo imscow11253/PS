@@ -32,3 +32,11 @@
 
  <p>건덕이가 다이얼 룰렛을 <mjx-container class="MathJax" jax="CHTML" style="font-size: 109%; position: relative;"><mjx-math class="MJX-TEX" aria-hidden="true"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D43E TEX-I"></mjx-c></mjx-mi></mjx-math><mjx-assistive-mml unselectable="on" display="inline"><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>K</mi></math></mjx-assistive-mml><span aria-hidden="true" class="no-mathjax mjx-copytext">$K$</span></mjx-container>번 회전해 얻을 수 있는 점수의 최댓값을 출력한다.</p>
 
+
+### 풀이 
+
+ <p>간단한 브루트포스 문제인데 못풀었던 문제이다. 최댓 값을 기준으로 왔다 갔다 반복하면 되는 것을 알았지만 어떤 인덱스를 왔다 갔다 할 대상으로 정할지 문제였다. 전체의 최대값이 꼭 최적의 선택이 아닐 수도 있기 때문이다. 그래서 dp를 써야하나… 하고 고민이 많았는데…
+
+결국 모든 인덱스에 대해서 왔다 갔다 할 기준으로 잡고 전부 다 계산해서 비교해보면 되는 것이었다. 대회 때는 왜 안보였지..?? 내가 브루트포스에 대해서 좀 잘못 알고 있었던 것 같다. 숫자 pop 문제도 그렇고.. 
+
+브루트포스 방식으로 우선 생각할 때, 어떤 기준으로 전체 반복을 돌릴지를 정해서 판단하고, 그 과정에서 시간초과가 나면 줄일 수 있는 방법을 찾는 방식을 사용해야겠다. (문제 접근 방식 정립)</p>
