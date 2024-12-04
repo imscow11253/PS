@@ -36,3 +36,7 @@
 
  <p>크기가 <mjx-container class="MathJax" jax="CHTML" style="font-size: 109%; position: relative;"><mjx-math class="MJX-TEX" aria-hidden="true"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D43E TEX-I"></mjx-c></mjx-mi></mjx-math><mjx-assistive-mml unselectable="on" display="inline"><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>K</mi></math></mjx-assistive-mml><span aria-hidden="true" class="no-mathjax mjx-copytext">$K$</span></mjx-container>인 십자의 개수를 출력한다.</p>
 
+ ### 풀이 
+
+ <p>누적합 활용까지 생각할 수 있는데 어떻게 누적해서 계산해두지? 하면서 고민을 좀 했다. 근데 그냥 알고있는 누적합을 활용하는 법을 알았다면 쉽게 보였을 문제.</p>
+
