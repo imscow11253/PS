@@ -233,18 +233,18 @@ int main() {
         int optimal_col;
         for(int i = 1;i<4;i++){
             for(int j=1;j<4;j++){
-                if(optimal_pair.first < simul_result_map[i][j].first){
-                    // cout << "optinal change to " << i << " " << j << '\n';
-                    optimal_pair = simul_result_map[i][j];
-                    optimal_row = i;
-                    optimal_col = j;
+                if(optimal_pair.first < simul_result_map[j][i].first){
+                    // cout << "optinal change to " << j << " " << i << '\n';
+                    optimal_pair = simul_result_map[j][i];
+                    optimal_row = j;
+                    optimal_col = i;
                 }
-                else if(optimal_pair.first == simul_result_map[i][j].first){
-                    if(optimal_pair.second > simul_result_map[i][j].second){
-                        // cout << "optinal change to by rotate " << i << " " << j << '\n';
-                        optimal_pair = simul_result_map[i][j];
-                        optimal_row = i;
-                        optimal_col = j;
+                else if(optimal_pair.first == simul_result_map[j][i].first){
+                    if(optimal_pair.second > simul_result_map[j][i].second){
+                        // cout << "optinal change to by rotate " << j << " " << i << '\n';
+                        optimal_pair = simul_result_map[j][i];
+                        optimal_row = j;
+                        optimal_col = i;
                     }
                 }
             }
