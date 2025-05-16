@@ -28,3 +28,7 @@
 
  <p>1로 시작하는 입력에 대해서 <mjx-container class="MathJax" jax="CHTML" style="font-size: 109%; position: relative;"><mjx-math class="MJX-TEX" aria-hidden="true"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D44E TEX-I"></mjx-c></mjx-mi></mjx-math><mjx-assistive-mml unselectable="on" display="inline"><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>a</mi></math></mjx-assistive-mml><span aria-hidden="true" class="no-mathjax mjx-copytext">$a$</span></mjx-container>와 <mjx-container class="MathJax" jax="CHTML" style="font-size: 109%; position: relative;"><mjx-math class="MJX-TEX" aria-hidden="true"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D44F TEX-I"></mjx-c></mjx-mi></mjx-math><mjx-assistive-mml unselectable="on" display="inline"><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>b</mi></math></mjx-assistive-mml><span aria-hidden="true" class="no-mathjax mjx-copytext">$b$</span></mjx-container>가 같은 집합에 포함되어 있으면 "<code>YES</code>" 또는 "<code>yes</code>"를, 그렇지 않다면 "<code>NO</code>" 또는 "<code>no</code>"를 한 줄에 하나씩 출력한다.</p>
 
+ ### 풀이 
+
+ <p>map 자료구조를 적절하게 사용해서 해결했다. 그렇게 어렵진 않은 것 같다. </p>
+
