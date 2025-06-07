@@ -40,3 +40,8 @@
 
  <p>첫 번째 플레이어부터 <mjx-container class="MathJax" jax="CHTML" style="font-size: 109%; position: relative;"><mjx-math class="MJX-TEX" aria-hidden="true"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D441 TEX-I"></mjx-c></mjx-mi></mjx-math><mjx-assistive-mml unselectable="on" display="inline"><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>N</mi></math></mjx-assistive-mml><span aria-hidden="true" class="no-mathjax mjx-copytext">$N$</span></mjx-container>번째 플레이어까지 게임이 종료됐을 때의 각 플레이어의 점수를 공백으로 구분하여 출력해주세요.</p>
 
+
+### 풀이 
+
+ <p>못 풀었다. 위상정렬인가 싶었으나 아니었다. 그냥 에라토스테네스의 체 아이디어를 사용해서 배수인 것의 score를 측정하면 된다. 에라토스테네스의 체가 시간초과 날 것 같이 생겼지만 그렇지 않다. </p>
+
