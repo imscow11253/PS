@@ -38,3 +38,7 @@
 
  <p>첫 줄에 배열 <mjx-container class="MathJax" jax="CHTML" style="font-size: 109%; position: relative;"><mjx-math class="MJX-TEX" aria-hidden="true"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D434 TEX-I"></mjx-c></mjx-mi></mjx-math><mjx-assistive-mml unselectable="on" display="inline"><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>A</mi></math></mjx-assistive-mml><span aria-hidden="true" class="no-mathjax mjx-copytext">$A$</span></mjx-container>를 비내림차순으로 정렬하기 위해 필요한 비용 총합의 최솟값을 출력하세요. 단, 배열을 비내림차순으로 만드는 것이 불가능한 경우 대신 <mjx-container class="MathJax" jax="CHTML" style="font-size: 109%; position: relative;"><mjx-math class="MJX-TEX" aria-hidden="true"><mjx-mo class="mjx-n"><mjx-c class="mjx-c2212"></mjx-c></mjx-mo><mjx-mn class="mjx-n"><mjx-c class="mjx-c31"></mjx-c></mjx-mn></mjx-math><mjx-assistive-mml unselectable="on" display="inline"><math xmlns="http://www.w3.org/1998/Math/MathML"><mo>−</mo><mn>1</mn></math></mjx-assistive-mml><span aria-hidden="true" class="no-mathjax mjx-copytext">$-1$</span></mjx-container>을 출력하세요.</p>
 
+ ### 풀이 
+
+ <p>어려웠다. 처음엔 외판원 순회 문제 마냥 비트마스킹을 이용한 dp인줄 알았는데 status를 비트마스킹으로 표현할수가 없었다. 생각이 도저히 안나서 문제 태그를 뜯어보니, 그래프에서 다이스트라 문제였다. 그래서 해당 배열을 어떻게 그래프로 표현할까 고민을 했다. 이건 status를 vector(int)로 표현한 그래프 (하나의 노드가 vector(int)로 표현된다.) 에서 다이스트라를 돌리는 방식으로 풀었다. 무식하게 bfs의 queue에 들어가는 것과, graph의 노드도 그렇고, 다이스트라의 pq에서도 그냥 무지성으로 vector(int)로 넣어서 시간초과나 메모리 초과를 살짝 걱정했는데 다행히 n의 범위가작아서 통과했다. 나중에 범위가 커지는 문제가 나오면 배열을 node로 표현하는 법을 배워야겠다. </p>
+
