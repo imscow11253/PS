@@ -20,7 +20,6 @@ int main(){
     for(int i =1; i< str.length(); i++){
         if(str[i-1] != str2[i-1]){
             cnt += 1;
-            str[i-1] = (str[i-1] == '0') ? '1' : '0';
             str[i] = (str[i] == '0') ? '1' : '0';
             if(i != n-1) str[i+1] = (str[i+1] == '0') ? '1' : '0';
         }
@@ -37,7 +36,6 @@ int main(){
     for(int i =1; i< str.length(); i++){
         if(str[i-1] != str2[i-1]){
             cnt2 += 1;
-            str[i-1] = (str[i-1] == '0') ? '1' : '0';
             str[i] = (str[i] == '0') ? '1' : '0';
             if(i != n-1) str[i+1] = (str[i+1] == '0') ? '1' : '0';
         }
