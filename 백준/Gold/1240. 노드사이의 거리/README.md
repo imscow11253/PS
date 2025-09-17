@@ -26,3 +26,8 @@
 
  <p><mjx-container class="MathJax" jax="CHTML" style="font-size: 109%; position: relative;"> <mjx-math class="MJX-TEX" aria-hidden="true"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D440 TEX-I"></mjx-c></mjx-mi></mjx-math><mjx-assistive-mml unselectable="on" display="inline"><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>M</mi></math></mjx-assistive-mml><span aria-hidden="true" class="no-mathjax mjx-copytext">$M$</span></mjx-container>개의 줄에 차례대로 입력받은 두 노드 사이의 거리를 출력한다.</p>
 
+
+### 풀이 
+
+ <p>그냥 BFS로 풀면 된다. 골드 5이지만 감을 익히기 위해서 풀었다. M 번의 쿼리마다 bfs의 시작점으로 잡고 bfs 돌리면 된다. </p>
+
