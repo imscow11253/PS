@@ -32,3 +32,10 @@
 
  <p>첫째 줄에 동호가 몇 번째로 퇴장당하는 지 출력한다.</p>
 
+ ### 풀이 
+
+ <p>너무 어렵다. 질문 게시판 보고 아이디어를 얻어서 GPT 시켜서 풀었다. 진짜 ㄹㅈㄷ 어려웠던 문제. 이건 생각 못할 것 같다. </p>
+
+ <img width="442" height="238" alt="image" src="https://github.com/user-attachments/assets/329c2251-ba82-438b-946d-3987901fbe1d" />
+
+
